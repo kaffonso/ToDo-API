@@ -1,6 +1,6 @@
 const mongoose = require('mongoose');
 
-const dbConfig = 'mongodb+srv://usuario:usuario@cluster0.vxnom.mongodb.net/Annotations?retryWrites=true&w=majority';
+const dbConfig = process.env.DB_CONFIG;
 
 //variavel para conectar o backend com o mongodb
 const connection = mongoose.connect(dbConfig,{ 
